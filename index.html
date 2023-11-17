@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-img" src="./img/starslogo.png">
+        <div class="tittle-header">
+            <h1 class="tittle">Stars</h1>
+            <h1 class="tittle">Rifas</h1>
+        </div>
+    </div>
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-button">Rifas</li>
+                <a href="./InfoPage/index.html"><li class="nav-button on-button">Informações</li></a>
+            </ul>
+        </nav>
+
+        <div onclick="openMenu()" class="material-icons menu-acess">menu</div>
+    </header>
+
+
+    <!--Card das rifas-->
+
+    <div class="card">
+        <div class="img-card">
+            <img id="img-card">
+        </div>
+        <div class="description">
+            <h2 id="name-tittle"></h2>
+            <p id="label"></p>
+            <h1 id="price"></h1>
+        </div>  
+        <button onclick="menuRifa()" class="open-card">Comprar</button>
+        <button class="material-icons delete-item" id="delete-item" style="background-color: red;">delete</button>
+    </div>
+
+
+
+    <!--Botões flutuantes para o ADM-->
+
+    <div onclick="menuShow()" id="menu-button" class="button-edit">
+        <i class="material-icons">create</i>
+    </div>
+
+    <div class="buttons">
+        <i onclick="createRifa()" id="button-add" class="material-icons" style="background-color: green;">add</i>
+        <i onclick="removeItem()" id="button-delete" class="material-icons button-delete" style="background-color: red;">delete</i>
+    </div>
+
+
+    <!--Card para selecionar o numero da rifa-->
+
+    <div class="rifa-page">
+        <div class="card">
+            <div class="img-card">
+                <img id="img-card">
+            </div>
+            <div class="description">
+                <h2 id="name-tittle"></h2>
+                <p id="label"></p>
+                <h2 id="price"></h2>
+            </div>  
+            <button class="open-card">Comprar</button>
+        </div>
+
+        <div class="number-list">
+            <ul class="nav-number">
+                <li id="number" value="0"></li>
+
+            </ul>
+        </div>
+        <button onclick="menuRifa()" class="material-icons button-close">close</button>
+    </div>
+
+
+
+    <!--Senha de acesso ao ADM-->
+    <div class="acessPage">
+        <input type="password" id="password">
+        <botton class="button-acess">Entrar</botton>
+    </div>
+
+    <!--Pagina de criação de rifa-->
+
+    <div class="create-page">
+
+        <input class="inputImg" type="file" onchange="cropImage()">
+
+        <h4>Titulo:</h4>
+        <input style="width: 90%; height: 5vh;" type="text">
+
+        <h4>Descrição:</h4>
+        <input style="width: 90%; height: 5vh;" type="text">
+
+        <h4>Quantidade de numeros:</h4>
+        <input style="height: 5vh;" type="number">
+
+        <h4>Valor em R$:</h4>
+        <input type="number">   
+
+        <button class="add-rifa">Adicionar</button>
+        <button onclick="createRifa()" class="material-icons button-close">close</button>
+
+    </div>
+
+    <footer>
+        <p onclick="menuAcess()" class="acess">AcessoAdm</p>
+    </footer>
+    <script src="./script.js"></script>
+
+    <div class="options">
+        <nav>
+            <ul class="menu-bar">
+                <li class="button-menu">Rifas</li>
+                <a href="./InfoPage/index.html"><li class="button-menu on-button">Informações</li></a>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+
+</html>
